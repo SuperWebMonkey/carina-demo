@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class TwitterPage extends AbstractPage {
 
-    @FindBy(xpath = "//span[@class='css-901oao'][text()='Sauce Labs']")
+    @FindBy(xpath = "//span[text()='Sauce Labs']")
     private ExtendedWebElement titleLabel;
 
     public TwitterPage(WebDriver driver) {

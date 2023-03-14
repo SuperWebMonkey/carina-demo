@@ -3,6 +3,7 @@ package com.qaprosoft.carina.demo.gui.saucedemo;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.PageOpeningStrategy;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.qaprosoft.carina.demo.gui.saucedemo.components.FooterLink;
 import com.qaprosoft.carina.demo.gui.saucedemo.components.ProductItem;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -19,9 +20,6 @@ public class ProductPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='inventory_item']")
     private List<ProductItem> products;
 
-    @FindBy(xpath = "//*[@id='page_wrapper']/footer/ul/li[1]/a")
-    private ExtendedWebElement twitterLink;
-
     @FindBy(xpath = "//button[@id='react-burger-menu-btn']")
     private ExtendedWebElement menuBtn;
 
@@ -30,6 +28,9 @@ public class ProductPage extends AbstractPage {
 
     @FindBy(xpath = "//*[@id='about_sidebar_link']")
     private ExtendedWebElement aboutLink;
+
+    @FindBy(css = ".footer")
+    private FooterLink footerLink;
 
     public ProductPage(WebDriver driver) {
         super(driver);
@@ -42,8 +43,8 @@ public class ProductPage extends AbstractPage {
         return new CartPage(driver);
     }
 
-    public void clickTwitterLink() {
-        twitterLink.click();
+    public FooterLink getFooterLink() {
+        return footerLink;
     }
 
     public void clicklogoutButton() {
