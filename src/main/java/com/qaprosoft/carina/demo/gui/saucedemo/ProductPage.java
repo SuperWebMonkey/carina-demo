@@ -3,7 +3,7 @@ package com.qaprosoft.carina.demo.gui.saucedemo;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.PageOpeningStrategy;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.qaprosoft.carina.demo.gui.saucedemo.components.FooterLink;
+import com.qaprosoft.carina.demo.gui.saucedemo.components.Footer;
 import com.qaprosoft.carina.demo.gui.saucedemo.components.ProductItem;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -30,7 +30,7 @@ public class ProductPage extends AbstractPage {
     private ExtendedWebElement aboutLink;
 
     @FindBy(css = ".footer")
-    private FooterLink footerLink;
+    private Footer footerLink;
 
     public ProductPage(WebDriver driver) {
         super(driver);
@@ -43,7 +43,7 @@ public class ProductPage extends AbstractPage {
         return new CartPage(driver);
     }
 
-    public FooterLink getFooterLink() {
+    public Footer getFooterLink() {
         return footerLink;
     }
 

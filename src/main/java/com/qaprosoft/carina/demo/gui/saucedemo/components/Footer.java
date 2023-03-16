@@ -7,11 +7,11 @@ import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class FooterLink extends AbstractUIObject {
+public class Footer extends AbstractUIObject {
     @FindBy(linkText = "Twitter")
     private ExtendedWebElement twitterLink;
 
-    public FooterLink(WebDriver driver, SearchContext searchContext) {
+    public Footer(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
