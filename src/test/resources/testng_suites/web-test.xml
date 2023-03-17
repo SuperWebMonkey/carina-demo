@@ -2,16 +2,6 @@
 <suite verbose="1" name="Carina Demo Tests - Web Sample" parallel="methods" thread-count="5">
 
     <parameter name="suiteOwner" value="qpsdemo"/>
-    <parameter name="jenkinsJobName" value="Web-Test"/>
-    <parameter name="jenkinsJobType" value="web"/>
-
-    <parameter name="jenkinsEnvironments" value="DEMO"/>
-    <parameter name="jenkinsSlackChannels" value="slack-test,slack-test2"/>
-
-    <parameter name="jenkinsRegressionPipeline" value="web_regression, full_regression"/>
-    <parameter name="jenkinsRegressionScheduling_api_regression" value="H 2 * * *"/>
-
-    <parameter name="jenkinsJobExecutionMode" value="continue"/>
 
     <test name="Web Test">
         <classes>
