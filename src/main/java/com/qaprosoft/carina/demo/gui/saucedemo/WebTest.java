@@ -17,8 +17,8 @@ public class WebTest extends AbstractSauceDemoTest {
     public void clickOnTwitter() {
         ProductPage productPage = authUtils.loginStandardUser();
         Assert.assertTrue(productPage.isPageOpened(), "Product page is not opened");
-        productPage.clickTwitterLink();
-        // create an assert in here
+        TwitterPage twitterPage = productPage.getFooterLink().clickTwitterLink();
+        Assert.assertTrue(twitterPage.isPageOpened(), "Twitter page is not opened");
     }
 
     @Test
@@ -26,7 +26,7 @@ public class WebTest extends AbstractSauceDemoTest {
         ProductPage productPage = authUtils.loginStandardUser();
         Assert.assertTrue(productPage.isPageOpened(), "Product page is not opened");
         AboutPage aboutPage = productPage.clickAboutLink();
-        // Assert.assertTrue(aboutPage.isPageOpened(), "about page is not opened");
+        Assert.assertTrue(aboutPage.isPageOpened(), "about page is not opened");
     }
 
     @Test
